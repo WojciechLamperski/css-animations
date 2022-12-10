@@ -48,10 +48,7 @@ body {
   position: absolute;
   top: -70px;
   left: 0px;
-  animation-name: drive;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  animation: drive 3s both infinite linear, jump 0.3s 1.2s ease;
 }
 
 .luigi {
@@ -100,5 +97,17 @@ body {
   }
   to {
     left: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: -70px;
+  }
+  50% {
+    top: -130px;
+  }
+  100% {
+    top: -70px;
   }
 }
