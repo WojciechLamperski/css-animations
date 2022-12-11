@@ -139,3 +139,25 @@ header:after {
 }
 
 /*// BASKET ANIMATION STYLES //*/
+
+body > img {
+  position: absolute;
+  top: 40px;
+  right: 50%;
+  height: 40px;
+  opacity: 0;
+  animation: imageToCart 1s ease forwards;
+}
+
+@keyframes imageToCart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    right: 40px;
+  }
+}

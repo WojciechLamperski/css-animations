@@ -58,8 +58,14 @@
 
       if (element.tagName === "BUTTON") {
         console.log("button :D");
-        console.log(element)
-        console.log(element.closest("li"))
+        const li = element.closest("li");
+        const img = li.querySelector("img");
+
+        const imgClone = document.createElement("img");
+        imgClone.src = img.src;
+        document.querySelector("body").appendChild(imgClone);
+
+        setTimeout((imgClone) => { document.querySelector("body > img").remove(); console.log("foo") }, 1000)
       }
     })
 
