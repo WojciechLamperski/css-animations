@@ -1,9 +1,12 @@
 <!DOCTYPE html>
+
 <head>
   <title>Basket Example</title>
   <link href="style.css" rel="stylesheet" type="text/css">
-  <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+    integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 </head>
+
 <body class="basket">
   <header>
     <h1>Sports Clothing</h1>
@@ -42,6 +45,23 @@
     </li>
   </ul>
   <script>
-    
+
+    const allbuttons = document.querySelectorAll("button");
+
+    // button.addEventListener("click", function (e) {
+    //   console.log("aaa");
+    // })
+
+    document.addEventListener("click", (event) => {
+      console.log("click :)")
+      const element = event.target;
+
+      if (element.tagName === "BUTTON") {
+        console.log("button :D");
+        console.log(element)
+        console.log(element.closest("li"))
+      }
+    })
+
   </script>
 </body>
